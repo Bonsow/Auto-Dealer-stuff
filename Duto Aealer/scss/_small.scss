@@ -1,0 +1,202 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+    background: $secondaryColor;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+    background-color: $primaryColor;
+}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $normalWeight;
+        color: $accentColor;
+    }
+    img {
+        display: block;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+#myButton::before {
+    content: "\2630";
+}
+
+#myButton {
+    border: none;
+    background: none;
+    color: white;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    font-weight: $lightWeight;
+    cursor: pointer;
+}
+
+ul.menuLinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    li a {
+        color: white;
+        display: block;
+        padding: .76rem $gutter;
+        text-decoration: none;
+    }
+    li.active a {
+        background: $primaryColor;
+        color: $accentColor;
+    }
+}
+
+ul.open.menuLinks {
+    display: block;
+}
+
+#myButton.open::before {
+    content: "x";
+}
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    color: $accentColor;
+}// end main
+
+.heroImage {
+    position: relative;
+    img {
+        width: calc(100% - 2rem);
+        height: auto;
+        display: block;
+        border-radius: 1rem;
+        margin: 1rem;
+    }
+    p {
+        position: absolute;
+        top: 0;
+        margin: 1rem 2rem;
+        padding: .75rem;
+        background-color: rgba($color: #00000071, $alpha: 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+    }
+}
+
+h1 {
+    margin: 1rem;
+    text-align: center;
+}
+
+div.animationCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    section {
+        text-align-last: center;
+        background: $primaryColor;
+        margin: 1rem 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    p, h3 {
+        text-align: center;
+    }
+    img {
+        max-width: 100px;
+    }
+    .shake:hover img {
+        animation: shake 0.33s 1;
+    }
+    .bounce:hover img {
+        animation: bounce 0.33s 1;
+    }
+    .size:hover img {
+        animation: scaleAni 0.33s 1;
+    }
+    .wiggle:hover img {
+        animation: wiggle 0.33s 1;
+    }
+}
+
+    // ANIMATIONS HERE IN THE ANIMATION SECTION OF THE CSS BABY LETS GOOO WHOOOOOOOOOOOOOOO
+    @keyframes shake {
+        0% {transform: rotate(0deg);}
+        25% {transform: rotate(5deg);}
+        50% {transform: rotate(-5deg);}
+        75% {transform: rotate(5deg);}
+        100% {transform: rotate(0deg);}
+    }
+    @keyframes bounce {
+        0% {transform: translateY(0px);}
+        25% {transform: translateY(3px);}
+        50% {transform: translateY(-3px);}
+        75% {transform: translateY(3px);}
+        100% {transform: translateY(-3px);}
+    }
+    @keyframes scaleAni {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.05);}
+        75% {transform: scale(0.975);}
+        100% {transform: scale(1.0);}
+    }
+    @keyframes wiggle {
+        0% {transform: translateX(0px);}
+        25% {transform: translateX(3px);}
+        50% {transform: translateX(-3px);}
+        75% {transform: translateX(3px);}
+        100% {transform: translateX(-3px);}
+    }
+
+
+div.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    div img {
+        width: 25px;
+    }
+    section {
+        text-align: center;
+        background-color: $primaryColor;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+
+/* --------------------------- FOOTER --------------------------- */
+
+#footerWrapper {
+    background-color: $primaryColor;
+    text-align: center;
+    color: $accentColor;
+    padding: 1rem 0;
+} 
+// end footer

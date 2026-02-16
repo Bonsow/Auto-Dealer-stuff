@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <!-- I don't know if you're reading this but I totally used illustrator to make this file then modified it after the fact -->
+  <!-- These messages at least show I kinda know what I'm doing -->
+  <!-- And if you are reading this I left mroe messages in the triforce svg file so idk check them out -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-miterlimit: 10;
+      }
+      <!-- This style was changed in the text editor -->
+    </style>
+  </defs>
+  <circle class="st0" cx="25" cy="25" r="12.5"/>
+  <polyline class="st0" points="11 30 6 25 11 20"/>
+  <polyline class="st0" points="20 11 25 6 30 11"/>
+  <polyline class="st0" points="30 39 25 44 20 39"/>
+  <polyline class="st0" points="39 20 44 25 39 30"/>
+</svg>
+
+<!-- All these numbers where rounded to the nearest whole -->

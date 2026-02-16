@@ -1,0 +1,17 @@
+header, nav, main {
+    max-width: 960px;
+    margin: auto;
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+
+div.allCards {
+    section {
+        flex-basis: calc(33.333% - (($gutter*2)/3));
+    }
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
